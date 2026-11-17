@@ -44,7 +44,7 @@ Identification confidence distinguishes `CANDIDATE` (extension or MIME associati
 
 Optional dependencies should be reported through handler availability; unsupported fields/formats belong in `limitations` or record warnings rather than placeholder values.
 
-Every new format module must provide bounded content confirmation (a magic signature or real parser validation) and typed metadata extraction through `MetadataCapabilityHandler`. Extension-only results stay `CANDIDATE`. See the common [Stream format-module requirements](https://github.com/gretchycat/libinfinistream/blob/main/CAPABILITIES.md#format-module-validation-and-metadata-requirements). Metadata tests must read real fixture bytes and verify both positive and negative cases; a generic source-length record from `MetadataRegistry` is useful fallback data, not a substitute for format-specific fields the parser can produce.
+Every new format module must provide bounded content confirmation (a magic signature or real parser validation) and typed metadata extraction through `MetadataCapabilityHandler`. Extension-only results stay `CANDIDATE`. See the common [Stream format-module requirements](https://github.com/infiniforge/libinfinistream/blob/main/CAPABILITIES.md#format-module-validation-and-metadata-requirements). Metadata tests must read real fixture bytes and verify both positive and negative cases; a generic source-length record from `MetadataRegistry` is useful fallback data, not a substitute for format-specific fields the parser can produce.
 
 ## Current format modules
 
